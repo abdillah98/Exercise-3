@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700,900|Google+Sans+Display:400,500">
+		<link rel="stylesheet" href="index.css">
+		<title>Google Account</title>
+	</head>
+	<body onload="loadData()">
+
+		<nav class="navbar">
+			<form class="navbar-form">
+				<div class="search-input-box">
+					<img src="search.png" height="17px">
+					<input type="text" name="search" id="search-input" onkeyup="filterTable(this)" placeholder="Telusuri sesuatu...">
+					<img src="close.png" height="14px" onclick="reset()">
+				</div>
+			</form>
+		</nav>
+
+		<div class="sidebar">
+			<ul class="sidebar-menu">
+				<li class="active">
+					<a href="index.html">
+						<img src="dashboard.png" height="17px"> Planets
+					</a>
+				</li>
+				<li>
+					<a href="about.html">
+						<img src="user.png" height="17px"> About me
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="content">
+			<table class="table" id="table-data">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Rotation period</th>
+						<th>Orbital Period</th>
+						<th>Diameter</th>
+						<th>Climate</th>
+						<th>Gravity</th>
+						<th>Detail</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="7" align="center">Load data...</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<th colspan="7">Total index of row : <b id="total"></b></th>
+					</tr>
+				</tfoot>
+			</table>
+			<button class="btn-blue d-none" id="button-previous" onclick="pagenation(this)">Back
+				<span class="text-white" id="number-previous" hidden>0</span>
+			</button>
+			<button class="btn-blue float-right" id="button-next" onclick="pagenation(this)">Next
+				<span class="text-white" id="number-next" hidden>2</span>
+			</button>
+		</div>
+
+		<div id="modal" class="modal-custom d-none">
+		    <!-- Modal content -->
+		    <div class="modal-content-custom box-shadow">
+		        <span class="close-modal" onclick="close_modal()">&times;</span>
+		        <h2>Detail</h2>
+		        <div class="title-line"></div>
+		        <br>
+		        <table>
+		        	<tbody>
+		        		<tr>
+		        			<td><b>Name</b></td>
+		        			<td>:</td>
+		        			<td><span id="name"></span></td>
+		        		</tr>
+		        		<tr>
+		        			<td><b>Rotation period</b></td>
+		        			<td>:</td>
+		        			<td><span id="rotation"></span></td>
+		        		</tr>
+		        		<tr>
+		        			<td><b>Orbital period</b></td>
+		        			<td>:</td>
+		        			<td><span id="orbital"></span></td>
+		        		</tr>
+		        		<tr>
+		        			<td><b>Diameter</b></td>
+		        			<td>:</td>
+		        			<td><span id="diameter"></span></td>
+		        		</tr>
+		        		<tr>
+		        			<td><b>Climate</b></td>
+		        			<td>:</td>
+		        			<td><span id="climate"></span></td>
+		        		</tr>
+		        		<tr>
+		        			<td><b>Gravity</b></td>
+		        			<td>:</td>
+		        			<td><span id="gravity"></span></td>
+		        		</tr>
+		        		<tr>
+		        			<td><b>Terrain</b></td>
+		        			<td>:</td>
+		        			<td><span id="terrain"></span></td>
+		        		</tr>
+		        		<tr>
+		        			<td><b>Surface Water</b></td>
+		        			<td>:</td>
+		        			<td><span id="surface"></span></td>
+		        		</tr>
+		        		<tr>
+		        			<td><b>Population</b></td>
+		        			<td>:</td>
+		        			<td><span id="population"></span></td>
+		        		</tr>	
+		        	</tbody>
+		        </table>
+		        <div class="text-right">
+		        	<button class="btn-blue" id="button-previous" onclick="close_modal()">Close</button>
+		        </div>
+		    </div>
+		</div> 
+
+		<!-- javaScript Area -->
+		<script src="index.js"></script>
+	</body>
+</html>

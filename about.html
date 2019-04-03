@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700,900|Google+Sans+Display:400,500">
+		<link rel="stylesheet" href="index.css">
+		<title>Google Account</title>
+	</head>
+	<body>
+		
+		<nav class="navbar">
+			<form class="navbar-form">
+				<div class="search-input-box">
+					<img src="search.png" height="17px">
+					<input type="text" name="search" id="search-input" onkeyup="filterTable(this)" placeholder="Telusuri sesuatu...">
+					<img src="close.png" height="14px" onclick="reset()">
+				</div>
+			</form>
+		</nav>
+
+		<div class="sidebar">
+			<ul class="sidebar-menu">
+				<li>
+					<a href="index.html">
+						<img src="dashboard.png" height="17px"> Planets
+					</a>
+				</li>
+				<li  class="active">
+					<a href="about.html">
+						<img src="user.png" height="17px"> About me
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="content">
+			<h1>About Me</h1>
+			<div class="title-line"></div>
+			<br>
+			<table class="table" width="30%">
+				<tbody>
+					<tr>
+						<td width="10%"><b>Name</b></td>
+						<td width="1%">:</td>
+						<td>Abdillah AG</td>
+					</tr>
+					<tr>
+						<td width="10%"><b>Email</b></td>
+						<td width="1%">:</td>
+						<td>abdillahag@gmail.com</td>
+					</tr>
+					<tr>
+						<td width="10%"><b>Whatsapp</b></td>
+						<td width="1%">:</td>
+						<td>+62 813-2878-6765</td>
+					</tr>
+				</tbody>
+			</table>
+		</div> 
+
+		<!-- javaScript Area -->
+		<!-- <script src="js/index.js"></script> -->
+	</body>
+</html>
